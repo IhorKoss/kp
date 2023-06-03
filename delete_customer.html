@@ -3,16 +3,22 @@
 <head>
    <meta charset="UTF-8">
    <title>Document</title>
-   <link rel="stylesheet" href="file.css">
+   <link rel="stylesheet" href="./file.css">
 </head>
 <body>
-<h1 class="text">Видалити клієнта</h1>
-   <form action="delete_customer.php" method="post">
-        <div class="form-group">
-               <label>ID</label>
-               <input type="text" class="form-control" name="id_customer" placeholder="0">
-        </div>
-       <button type="submit" name="submit" action="delete_customer.php" class="btn btn-primary">Підтвердити</button>
-       </form>
+
+  <div class="container">
+   <form class="form" action="delete_customer.php" method="post">
+      <h1 class="text">Видалити клієнта</h1>
+         <div class="form-group">
+            <div class="form-inputs">
+                   <label class="form-label">ID клієнта</label>
+                   <input class="form-control" type='search' list='id_customer' name="id_customer" placeholder="ID">
+            </div>
+             <datalist id='id_customer'>
+         </div>
+         <button type="submit" name="submit" action="delete_customer.php" class="nav-btn">Підтвердити</button>
+        </form>
+  </div >
 </body>
 </html>

@@ -6,78 +6,92 @@
    <link rel="stylesheet" href="file.css">
 </head>
 <body>
-       <h1 class="text">Вибірка з таблиці замовлення</h1>
-   <form action="option_order.php" method="POST">
-       <h3 class="text_small">З таблиці вироби</h3>
-       <div class="form_group">
-           <label>ID виробу</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="product.id_product">
-       </div>
-       <div class="form_group">
-           <label>Назва виробу</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="product.name_product">
-       </div>
-       <div class="form_group">
-           <label>Ціна виробу (грн)</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="product.price_product">
-       </div>
-       <h3 class="text_small">З таблиці матеріали</h3>
-       <div class="form_group">
-           <label>ID матеріалу</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="material.id_material">
-       </div>
-       <div class="form_group">
-           <label>Назва матеріалу</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="material.name_material">
-       </div>
-       <div class="form_group">
-           <label>Ціна (грн.)</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="material.price_material">
-       </div>
-       <h3 class="text_small">З таблиці клієнти</h3>
-       <div class="form_group">
-           <label>ID</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="customer.id_customer">
-       </div>
-       <div class="form_group">
-           <label>ПІБ клієнта</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="customer.fullname_customer" >
-       </div>
-       <div class="form_group">
-           <label>Номер телефону</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="customer.phone_customer" >
-       </div>
-       <h3 class="text_small">З таблиці замовлення</h3>
-       <div class="form_group">
-           <label>ID замовлення</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="orders.id_order">
-       </div>
-       <div class="form_group">
-           <label>ID виробу</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="orders.id_product">
-       </div>
-       <div class="form_group">
-           <label>ID матеріалу</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="orders.id_material">
-       </div>
-       <div class="form_group">
-           <label>ID клієнта</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="orders.id_customer">
-       </div>
-       <div class="form_group">
-           <label>Ціна за одиницю</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="orders.price_order" >
-       </div>
-       <div class="form_group">
-           <label>Кількість</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="orders.quantity" >
-       </div>
-       <div class="form_group">
-           <label>Дата замовлення</label>
-           <input type="checkbox" class="form-control" name="check_list[]" value="orders.date_order" >
-       </div>
-       <p> </p>
-       <button type="submit" name="submit" class="btn btn-primary">Підтвердити</button>
-   </form>
+    <div class="container">
+        <p></p>
+        <h1 class="text">Вибірка</h1>
+        <form class="option_form" action="option_order.php" method="POST">
+<div class="form-options">
+    <div class="option_form_group">
+                       <h3 class="text_small">З виробів</h3>
+                       <div class="">
+                           <label>ID виробу</label>
+                           <input type="checkbox" class="form-control" name="check_list[]" value="product.id_product">
+                       </div>
+                   <div class="">
+                       <label>Назва виробу</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="product.name_product">
+                   </div>
+                   <div class="">
+                       <label>Ціна виробу (грн)</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="product.price_product">
+                   </div>
+    </div>
+    <div class="option_form_group">
+                   <h3 class="text_small">З матеріалів</h3>
+                   <div class="">
+                       <label>ID матеріалу</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="material.id_material">
+                   </div>
+                   <div class="">
+                       <label>Назва матеріалу</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="material.name_material">
+                   </div>
+                   <div class="">
+                       <label>Ціна (грн.)</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="material.price_material">
+                   </div>
+    </div>
+    <div class="option_form_group">
+                   <h3 class="text_small">З клієнтів</h3>
+                   <div class="">
+                       <label>ID</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="customer.id_customer">
+                   </div>
+                   <div class="">
+                       <label>ПІБ клієнта</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="customer.fullname_customer" >
+                   </div>
+                   <div class="">
+                       <label>Номер телефону</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="customer.phone_customer" >
+                   </div>
+    </div>
+    <div class="option_form_group">
+                   <h3 class="text_small">З замовлень</h3>
+                   <div class="">
+                       <label>ID замовлення</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="orders.id_order">
+                   </div>
+                   <div class="">
+                       <label>ID виробу</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="orders.id_product">
+                   </div>
+                   <div class="">
+                       <label>ID матеріалу</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="orders.id_material">
+                   </div>
+                   <div class="">
+                       <label>ID клієнта</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="orders.id_customer">
+                   </div>
+                   <div class="">
+                       <label>Ціна за одиницю</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="orders.price_order" >
+                   </div>
+                   <div class="">
+                       <label>Кількість</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="orders.quantity" >
+                   </div>
+                   <div class="">
+                       <label>Дата замовлення</label>
+                       <input type="checkbox" class="form-control" name="check_list[]" value="orders.date_order" >
+                   </div>
+    </div>
+</div>
+           <div class="form-btn">
+            <button type="submit" name="submit" class="nav-btn">Підтвердити</button>
+           </div>
+        </form>
+    </div>
 </body>
 </html>

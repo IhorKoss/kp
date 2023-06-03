@@ -4,12 +4,31 @@
    <title>Фабрика</title>
       <link rel="stylesheet" href="file.css">
 </head>
+<style>
+   .image {
+   width: 100%;
+   position: fixed;
+   bottom: 0;
+   transition: filter 0.3s ease;
+}
 
+.image:hover::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(255, 255, 255, 0.5);
+}
+</style>
 <body>
 <div class="container">
       <div class="text">
-        <h1>Furniture paradise</h1>
-        <h2>Ласкаво просимо!</h2>
+        <h1>Furniture paradise</h1>  
+     </div>
+     <div>
+        <h2>Ласкаво просимо! Будь ласка, оберіть потрібну Вам таблицю:</h2>
      </div>
      <div class="butt">
         <button class="nav-btn"><a href="select_product.php">Вироби</a></button>
@@ -19,5 +38,6 @@
         <button class="nav-btn"><a href="select_customer.php">Клієнти</a></button>
         <button class="nav-btn"><a href="select_order.php">Замовлення</a></button>
      </div>
+     <img class="image" src="C:\Users\Kos\Desktop\4 семестр">
 </div>
 </body>

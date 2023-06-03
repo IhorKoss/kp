@@ -6,13 +6,18 @@
    <link rel="stylesheet" href="file.css">
 </head>
 <body>
-<h1 class="text">Видалити замовлення</h1>
-   <form action="delete_order.php" method="post">
-        <div class="form-group">
-               <label>ID замовлення</label>
-               <input type="text" class="form-control" name="id_order" placeholder="0">
-        </div>
-       <button type="submit" name="submit" action="delete_workers.php" class="btn btn-primary">Підтвердити</button>
-       </form>
+   <div class="container">
+      <form class="form" action="delete_order.php" method="post">
+         <h1 class="text">Видалити замовлення</h1>
+            <div class="form-group">
+               <div class="form-inputs">
+                      <label class="form-label">ID замовлення</label>
+                      <input class="form-control" type='search' list='id_order' name="id_order" placeholder="ID">
+               </div>
+                <datalist id='id_order'>
+            </div>
+            <button type="submit" name="submit" action="delete_order.php" class="nav-btn">Підтвердити</button>
+           </form>
+     </div >
 </body>
 </html>

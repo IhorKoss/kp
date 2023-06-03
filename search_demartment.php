@@ -17,7 +17,7 @@
                    <h1 class="text">Пошук цеху</h1>
                        <div class="form-group">
                             <div class="form-inputs">
-                               <label class="form-label">Назва цеху</label>
+                               <label class="form-label">ID цеху</label>
                                <input class="form-control" type='search' list='id_demartment' name="id_demartment" placeholder="ID">
                             </div>
                            <datalist id='id_demartment'>

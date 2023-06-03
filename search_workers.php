@@ -3,21 +3,36 @@
 <head>
    <meta charset="UTF-8">
    <title>Document</title>
-   <link rel="stylesheet" href="file.css">
+   <link rel="stylesheet" href="./file.css">
 </head>
 <body>
-   <form  method="post">
-       <h1 class="text">Пошук працівника</h1>
-        <div class="form-group">
-               <label>ID працівника</label>
-               <input type="text" class="form-control" name="id_worker" placeholder="0">
-        </div>
-       <button type="submit" name="submit"  class="btn btn-primary">Підтвердити</button>
-       <p> </p>
-       <a href="select_workers.php"><h1 class="text">Повернутись до попередньої сторінки</h1></a>
-       </form>
-</body>
-</html>
+<div class="container">
+<?php
+    $conn = mysqli_connect('localhost','root','igor12345kos54321!','furniture');
+    if(mysqli_connect_errno()) {
+       echo "Помилка".mysqli_connect_error();}
+    $query=mysqli_query($conn, "select * from workers");
+    ?>
+    <form class="form" method="post">
+                   <h1 class="text">Пошук працівника</h1>
+                       <div class="form-group">
+                            <div class="form-inputs">
+                               <label class="form-label">ID працівника</label>
+                               <input class="form-control" type='search' list='id_worker' name="id_worker" placeholder="ID">
+                            </div>
+                           <datalist id='id_worker'>
+                               <?php
+                               while($row=mysqli_fetch_array($query))
+                               {
+                                   echo "<option>$row[id_worker]</option>";
+                               }
+                               echo "</datalist>";
+                               ?>
+                       </div>
+                   <button type="submit" name="submit"  class="nav-btn" style="margin-bottom: 20px;">Підтвердити</button>
+                   <button class="main_btn" type="button"><a href="./select_workers.php">Назад</a></button>
+                </form>
+
 <?php
 $connection = mysqli_connect('localhost','root','igor12345kos54321!','furniture');
 $id_worker = (isset($_POST['id_worker']) ? $_POST['id_worker'] : '');
@@ -38,3 +53,7 @@ if($result)
    mysqli_free_result($result);}
 mysqli_close($connection);
 ?>
+</div>
+
+</body>
+</html>
