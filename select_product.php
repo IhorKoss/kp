@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-   <h1 style="text-align: center; font-family: 'Times New Roman'">Інформація по виробах</h1>
+   <h1 style="text-align: center; font-family: 'Times New Roman'">Інформація про вироби</h1>
    <?php
    $connection = mysqli_connect('localhost','root','igor12345kos54321!','furniture');
    $query ="SELECT * FROM product";

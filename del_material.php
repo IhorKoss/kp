@@ -14,21 +14,25 @@ if(mysqli_connect_errno())
 }
 $query=mysqli_query($conn, "select * from material");
 ?>
-<form action="delete_material.php" method="post">
-   <h1 class="text">Видалити Матеріал</h1>
-   <div class="form-group">
-       <label>Назва виробу</label>
-       <input type='search' list='name_material' name="name_material" placeholder="name">
-       <datalist id='name_material'>
-           <?php
-           while($row=mysqli_fetch_array($query))
-           {
-               echo "<option>$row[name_material]</option>";
-           }
-           echo "</datalist>";
-           ?>
-   </div>
-   <button type="submit" name="submit" action="delete_material.php" class="btn btn-primary">Підтвердити</button>
-</form>
+<div class="container">
+   <form class="form" action="delete_material.php" method="post">
+      <h1 class="text">Видалити матеріал</h1>
+      <div class="form-group">
+         <div class="form-inputs">
+             <label class="form-label">Назва матеріалу</label>
+             <input type='search' list='name_material' name="name_material" placeholder="name">
+         </div>
+          <datalist id='name_material'>
+             <?php
+              while($row=mysqli_fetch_array($query))
+              {
+                 echo "<option>$row[name_material]</option>";
+             }
+             echo "</datalist>";
+             ?>
+      </div>
+      <button type="submit" name="submit" action="delete_material.php" class="nav-btn">Підтвердити</button>
+   </form>
+</div>
 </body>
 </html>

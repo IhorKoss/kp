@@ -7,8 +7,10 @@ $result = mysqli_query($connection,"DELETE FROM orders WHERE id_order = '$id_ord
 <html>
 <head>
    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Document</title>
-   <link rel="stylesheet" href="file.css">
+   <link rel="stylesheet" href="./file.css">
 </head>
 <body>
 <a href="select_order.php"><h1 class="text">Повернутись до попередньої сторінки</h1></a>

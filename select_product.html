@@ -6,28 +6,7 @@
    <link rel="stylesheet" href="select.css">
 </head>
 <body>
-<h1 style="text-align: center; font-family: 'Times New Roman'">Інформація по виробах фабрики</h1>
-<?php
-$connection = mysqli_connect('localhost','root','Password','furniture');
-$query ="SELECT * FROM product";
-$result = mysqli_query($connection, $query) or die("Помилка" . mysqli_error($connection));
-if($result)
-{
-   $rows = mysqli_num_rows($result);
-
-   echo "<table><tr><th>ІD</th><th>Назва виробу</th><th>Ціна з одиницю</th><th>ID цеху</th>";
-   for ($i = 0 ; $i < $rows ; ++$i)
-   {
-       $row = mysqli_fetch_row($result);
-       echo "<tr>";
-           for ($j = 0 ; $j < 4 ; ++$j) echo "<td> $row[$j]</td>";
-       echo "</tr>";
-   }
-   echo "</table>";
-   mysqli_free_result($result);
-}
-mysqli_close($connection);
-?>
+<h1 style="text-align: center; font-family: 'Times New Roman'">Інформація про вироби</h1>
  <div class="butt">
      <p> </p>
    <button type="button"><a href="add_product.html">Додати</a></button>

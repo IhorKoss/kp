@@ -25,6 +25,6 @@ if($result) {
    mysqli_free_result($result); }
 mysqli_close($connection);
 ?>
-<a href="select_product.php"><h1 class="text">Повернутись до попередньої сторінки</h1></a>
+<a href="select_demartment.php"><h1 class="text">Повернутись до попередньої сторінки</h1></a>
 </body>
 </html>
